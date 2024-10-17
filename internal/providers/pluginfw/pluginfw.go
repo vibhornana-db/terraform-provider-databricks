@@ -18,6 +18,7 @@ import (
 	providercommon "github.com/databricks/terraform-provider-databricks/internal/providers/common"
 	"github.com/databricks/terraform-provider-databricks/internal/providers/pluginfw/resources/cluster"
 	"github.com/databricks/terraform-provider-databricks/internal/providers/pluginfw/resources/library"
+	"github.com/databricks/terraform-provider-databricks/internal/providers/pluginfw/resources/notificationdestinations"
 	"github.com/databricks/terraform-provider-databricks/internal/providers/pluginfw/resources/qualitymonitor"
 	"github.com/databricks/terraform-provider-databricks/internal/providers/pluginfw/resources/registered_model"
 	"github.com/databricks/terraform-provider-databricks/internal/providers/pluginfw/resources/volume"
@@ -55,6 +56,7 @@ func (p *DatabricksProviderPluginFramework) DataSources(ctx context.Context) []f
 		volume.DataSourceVolumes,
 		registered_model.DataSourceRegisteredModel,
 		registered_model.DataSourceRegisteredModelVersions,
+		notificationdestinations.DataSourceNotificationDestinations,
 	}
 }
 
